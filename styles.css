@@ -8,23 +8,61 @@ html{
 }
 
 body{
-    background: linear-gradient(to bottom, #777, #555);
+    background-color: #a0f0c0;
 }
+
+#intro-title{
+    width: 300px;
+    font-family: 'Poppins';
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -145px;
+    top: 100px;
+    font-weight: bold;
+    background-color: #fff;
+    border-radius: 20px;
+    pointer-events: none;
+    box-shadow: 0px 5px 3px #ccc;
+}
+
+#text-lst{
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+}
+
+.txt{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.txt:hover{
+    color: aqua;
+}
+
+
+/*Face animation and config*/
 
 #head{
     width: 300px;
     height: 300px;
     border-radius: 0px 0px 300px 300px;
     background-color: #f5ad5a;
-    margin: auto;
-    margin-top:25%;
+    margin:auto;
+    top:40%;
+    left:50%;
+    margin-left: -150px;
+    position: absolute;
 }
 
 #hair{
     height:100px;
     width: 300px;
     border-radius: 50px 50px 0px 0px;
-    background-color: #2a0000;
+    background-color: #250000;
     position:absolute;
     margin-top:-80px;
 }
@@ -32,7 +70,7 @@ body{
     height:80px;
     width: 300px;
     border-radius: 50px 50px 50px 50px;
-    background-color: #330000;
+    background-color: #3f0000;
     position:absolute;
 }
 
