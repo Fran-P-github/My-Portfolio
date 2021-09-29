@@ -6,7 +6,104 @@
 #head{
     width: 300px;
     height: 300px;
-    border-radius: 300px;
-    background-color: red;
+    border-radius: 0px 0px 300px 300px;
+    background-color: #f5ad5a;
     margin: auto;
+    margin-top:200px;
+}
+
+#hair{
+    height:80px;
+    width: 300px;
+    border-radius: 100px 100px 0px 0px;
+    background-color: #300;
+    position:absolute;
+    margin-top:-65px;
+}
+
+#eyes{
+    margin:auto;
+    justify-content: space-around;
+    display:flex;
+    width: 250px;
+}
+
+.eyeballs{
+    justify-content: space-around;
+    display:flex;
+    margin:auto;
+    background-color: #eee;
+    height: 70px;
+    width:70px;
+    border-radius:70px;
+    margin-top: 50px;
+}
+
+.pupil{
+    width:30px;
+    height:30px;
+    border-radius:30px;
+    margin:auto;
+    background-color: #000;
+    transition: .3s all;
+}
+
+.skin{
+    background-color: #300;
+    border-radius: 80px 80px 0px 0px;
+    width: 70px;
+    height: 20px;
+    margin-left: -20px;
+    margin-top: -20px;
+    transition: all .3s;
+}
+
+.mouth{
+    width:100px;
+    height:10px;
+    background-color:#000;
+    margin:auto;
+    margin-top:80px;
+    border-radius:20px;
+    transition: .3s height;
+}
+
+.tongue{
+    background-color: #ff5555;
+    width:70px;
+    height:0px;
+    border-radius:20px;
+    transform:translateY(10px);
+    margin:auto;
+    transition: height .3s;
+}
+
+.line{
+    width:3px;
+    height:0px;
+    margin:auto;
+    background-color: #ee4444;
+    transition:height .3s;
+}
+
+#head:hover .skin{
+    margin-top:-40px;
+    margin-left:-15px;
+}
+
+#head:hover .pupil{
+    height: 40px;
+    width: 40px;
+}
+
+#head:hover .mouth{
+    height:30px;
+}
+
+#head:hover .tongue{
+    height:100px;
+}
+
+#head:hover .line{
+    height: 80px;
 }
