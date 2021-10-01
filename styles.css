@@ -86,13 +86,16 @@ body{
 }
 
 #to{
-    position: relative;
+    position: absolute;
     font-size: 30px;
     color: #fff;
     text-shadow: 0px 3px 0px #aaa;
     font-family: poppins;
     text-align: center;
-    top: 15vh;
+    width: 100px;
+    left: 50%;
+    top: 20%;
+    margin-left: -50px;
 }
 
 #name{
@@ -435,4 +438,18 @@ nav{
     .background{
         display: none;
     }
+}
+
+@media screen and (max-height:700px){
+    #to{
+        top: 16%;
+    }
+}
+
+@media screen and (max-height:630px){
+    #head{
+        display: none;
+    }
+
+    /*CENTER TEXT*/
 }
