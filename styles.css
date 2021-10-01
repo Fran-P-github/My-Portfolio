@@ -3,24 +3,50 @@
     margin: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: #a0f0c0;
-    height: 2000px;
+    background-color: #086;
+    overflow-x: hidden;
+    height: 500vh;
 }
 
 /*Welcome*/
 
-#welcome{
+.container{
     background-color: #50f0c0a0;
-    top: 5vh;
-    left: 5vw;
+    box-shadow: 0px 10px 0px #30d0a0a0;
     width: 90vw;
     height: 90vh;
     border-radius: 30px;
     position: absolute;
     user-select: none;
     cursor: default;
-    border: 2px solid #042;
+    left: 5vw;
+}
+
+#welcome{
+    top: 5vh;
+}
+
+.title{
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    font-size: 40px;
+    font-family: poppins;
+    width: 300px;
+    top: 5vh;
+    background-color: #fff;
+    box-shadow: 0px 5px 0px #ccc;
+    color: #000;
+    letter-spacing: 3px;
+    user-select: none;
+    text-align: center;
+    border-radius: 20px;
 }
 
 #intro-title {
@@ -101,7 +127,8 @@ body{
     position: absolute;
     font-family: 'Poppins';
     left: 50%;
-    margin-left: -133px;
+    width: 300px;
+    margin-left: -150px;
     bottom: 3vh;
     font-weight: bold;
     background-color: #fff;
@@ -128,6 +155,45 @@ body{
     color: aquamarine;
 }
 
+.background{
+    position: absolute;
+    top: -50px;
+    height: 100%; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background img{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    opacity: 1;
+}
+
+/*About*/
+
+#about{
+    top: 105vh;
+}
+
+#projects{
+    top: 205vh;
+}
+
+#social{
+    top: 305vh;
+}
+
+#contact{
+    top: 405vh;
+}
+
 /*Burger animations*/
 
 .burger{
@@ -137,7 +203,7 @@ body{
     height:40px;
     width:40px;
     cursor:pointer;
-    z-index: 4;
+    z-index: 11;
 }
 
 .burger div{
@@ -146,11 +212,22 @@ body{
     margin-top:8px;
     background-color: #fff;
     box-shadow: 0px 3px 0px #ccc;
+    transition: transform .3s, opacity .2s;
 }
 
-.brg-active{
-    background-color: #000;
+.brg-active #line1{
+    transform: rotate(-45deg) translateY(16px) translateX(-5px);
 }
+
+.brg-active #line2{
+    opacity: 0;
+}
+
+.brg-active #line3{
+    transform: rotate(45deg) translateY(-15px);
+}
+
+
 
 /*Nav bar*/
 
@@ -159,8 +236,9 @@ nav{
 }
 
 .nav-bar{
+    top: 0;
     font-family: poppins;
-    z-index: 3;
+    z-index: 10;
     height: 100%;
     width: 45vw;
     background-color: #60b090;
@@ -171,17 +249,12 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    border-radius: 0px 0px 0px 100px;
     transition: transform .5s;
-}
-
-.nav-bar a{
-    text-decoration: none;
-    color:aquamarine;
 }
 
 .nav-bar li{
     list-style:none;
+    color:aquamarine;
     width:100%;
     position: relative;
     text-align: center;
@@ -199,8 +272,23 @@ nav{
     align-items: center;
 }
 
+.nav-bar li::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    top: 65%;
+    background-color: aquamarine;
+    transform: scale(0);
+    transition: all .3s;
+}
+
 .nav-bar li:hover{
     background-color:#50a080;
+}
+
+.nav-bar li:hover::after{
+    transform: scale(1);
 }
 
 .nav-active{
@@ -216,9 +304,10 @@ nav{
     background-color: #f5ad5a;
     box-shadow: 0px 5px 0px #e59d4a;
     margin:auto;
-    top:40vh;
+    top:50vh;
     left:50%;
     margin-left: -105px;
+    margin-top: -102.5px;
     position: absolute;
 }
 
@@ -265,7 +354,7 @@ nav{
     border-radius:25px;
     margin:auto;
     background-color: #000;
-    transition: .3s all;
+    transition: .2s all;
 }
 
 .skin{
@@ -276,7 +365,7 @@ nav{
     height: 10px;
     margin-left: -13px;
     margin-top: -20px;
-    transition: all .3s;
+    transition: all .2s;
 }
 
 .nose{
@@ -320,7 +409,7 @@ nav{
 
 #head:hover .skin{
     margin-top:-30px;
-    margin-left:-11px;
+    margin-left:-10.5px;
 }
 
 #head:hover .pupil{
@@ -339,4 +428,11 @@ nav{
 
 #head:hover .line{
     height: 40px;
+}
+
+
+@media screen and (max-width:800px){
+    .background{
+        display: none;
+    }
 }

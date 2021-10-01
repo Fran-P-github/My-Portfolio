@@ -3,10 +3,40 @@
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4076a0546f.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Paredes's Portfolio</title>
 </head>
 <body>
-    <div id="welcome">
+
+    <!--nav bar-->
+
+    <div class="burger">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+    </div>
+    <nav>
+        <ul class="nav-bar">
+            <li id="home-button">Home</li>
+            <li id="about-button">About</li>
+            <li id="projects-button">Projects</li>
+            <li id="social-button">Social</li>
+            <li id="contact-button">Contact</li>
+        </ul>
+    </nav>
+
+    <!--intro-->
+    
+    <section id="welcome" class="container">
+        <section class="background">
+            <img src="imgs/1.png" class="bg-img" data-speed="-3"/>
+            <img src="imgs/2.png" class="bg-img" data-speed="-2"/>
+            <img src="imgs/3.png" class="bg-img" data-speed="3" />
+            <img src="imgs/4.png" class="bg-img" data-speed="2" />
+            <img src="imgs/5.png" class="bg-img" data-speed="3" />
+            <img src="imgs/6.png" class="bg-img" data-speed="-3"/>
+        </section>
         <h1 id="intro-title">
             <ul id="text-lst">
                 <li class="txt">&lt;</li>
@@ -22,6 +52,32 @@
             </ul>
         </h1>
         <h3 id="to">to</h3>
+            <!--face divs-->
+
+    <div id="head">
+        <div id="hair">
+            <div id="hair-part"></div>
+        </div>
+        <div id="eyes">
+            <div class="eyeballs">
+                <div class="pupil">
+                    <div class="skin"></div>
+                </div>
+            </div>
+            <div class="eyeballs">
+                <div class="pupil">
+                    <div class="skin"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nose"></div>
+        <div class="mouth">
+            <div class="tongue">
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
         <h1 id="name">
             <ul class="name-lst">
                 <li class="name-txt">F</li>
@@ -52,48 +108,81 @@
                 <li class="port-txt">&gt;</li>
             </ul>
         </h1>
-    </div>
+    </section>
 
-    <div class="burger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    <nav>
-        <ul class="nav-bar">
-            <a href="#"><li>About</li></a>
-            <a href="#"><li>Projects</li></a>
-            <a href="#"><li>Social</li></a>
-            <a href="#"><li style="border-radius: 0px 0px 0px 100px;">Contact</li></a>
-        </ul>
-    </nav>
+    <!--About-->
 
-    <!--face divs-->
+    <section id="about" class="container">
+        <h1 class="title">
+            <ul id="text-lst">
+                <li class="txt">&lt;</li>
+                <li class="txt">A</li>
+                <li class="txt">b</li>
+                <li class="txt">o</li>
+                <li class="txt">u</li>
+                <li class="txt">t</li>
+                <li class="txt">/</li>
+                <li class="txt">&gt;</li>
+            </ul>
+        </h1>
+    </section>
 
-    <div id="head">
-        <div id="hair">
-            <div id="hair-part"></div>
-        </div>
-        <div id="eyes">
-            <div class="eyeballs">
-                <div class="pupil">
-                    <div class="skin"></div>
-                </div>
-            </div>
-            <div class="eyeballs">
-                <div class="pupil">
-                    <div class="skin"></div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="nose"></div>
-        <div class="mouth">
-            <div class="tongue">
-                <div class="line"></div>
-            </div>
-        </div>
-    </div>
+    <!--Projects-->
+
+    <section id="projects" class="container">
+        <h1 class="title">
+            <ul id="text-lst">
+                <li class="txt">&lt;</li>
+                <li class="txt">P</li>
+                <li class="txt">r</li>
+                <li class="txt">o</li>
+                <li class="txt">j</li>
+                <li class="txt">e</li>
+                <li class="txt">c</li>
+                <li class="txt">t</li>
+                <li class="txt">s</li>
+                <li class="txt">/</li>
+                <li class="txt">&gt;</li>
+            </ul>
+        </h1>
+    </section>
+
+    <!--Social-->
+
+    <section id="social" class="container">
+        <h1 class="title">
+            <ul id="text-lst">
+                <li class="txt">&lt;</li>
+                <li class="txt">S</li>
+                <li class="txt">o</li>
+                <li class="txt">c</li>
+                <li class="txt">i</li>
+                <li class="txt">a</li>
+                <li class="txt">l</li>
+                <li class="txt">/</li>
+                <li class="txt">&gt;</li>
+            </ul>
+        </h1>
+    </section>
+
+    <!--Contact-->
+
+    <section id="contact" class="container">
+        <h1 class="title">
+            <ul id="text-lst">
+                <li class="txt">&lt;</li>
+                <li class="txt">C</li>
+                <li class="txt">o</li>
+                <li class="txt">n</li>
+                <li class="txt">t</li>
+                <li class="txt">a</li>
+                <li class="txt">c</li>
+                <li class="txt">t</li>
+                <li class="txt">/</li>
+                <li class="txt">&gt;</li>
+            </ul>
+        </h1>
+    </section>
 
     <script src="app.js"></script>
 </body>
