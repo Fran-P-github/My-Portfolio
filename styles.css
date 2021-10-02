@@ -3,21 +3,29 @@
     margin: 0;
 }
 
+:root{
+    --section_color: #5ac09d; /*original: #50f0c0a0*/
+    --section_3d_color: #459278; /*original: #30d0a0a0*/
+    --background_color: #417764; /*original: #086*/
+    --highlight_color: #7fffd4; /*original: aquamarine*/
+    --shadow_color: #2e4f43; /*original: #005040a0*/
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
-    background-color: #086;
+    background-color: var(--background_color);
     overflow-x: hidden;
     height: 500vh;
 }
 
-/*Welcome*/
+/*Containers config*/
 
 .container{
-    background-color: #50f0c0a0;
-    box-shadow: 0px 10px 0px #30d0a0a0;
+    background-color: var(--section_color); 
+    box-shadow: 0px 10px 0px var(--section_3d_color);
     width: 90vw;
     height: 90vh;
     border-radius: 30px;
@@ -25,10 +33,21 @@ body{
     user-select: none;
     cursor: default;
     left: 5vw;
+    transition: box-shadow .4s, top .4s; /*all .4s*/
 }
+
+.container:hover{
+    box-shadow: 0px 10px 0px var(--section_3d_color), 0px 30px 10px var(--shadow_color); /*#30d0a0a0  #005040a0*/
+}
+
+/*Home*/
 
 #welcome{
     top: 5vh;
+}
+
+#welcome:hover{
+    top: 3vh;
 }
 
 .title{
@@ -82,7 +101,7 @@ body{
 }
 
 .txt:hover{
-    color:aquamarine;
+    color:var(--highlight_color);
 }
 
 #to{
@@ -155,14 +174,16 @@ body{
 }
 
 .port-txt:hover{
-    color: aquamarine;
+    color: var(--highlight_color);
 }
 
 .background{
     position: absolute;
-    top: -50px;
+    top: -5vh;
+    left: 50%;
+    margin-left: -45vw;
     height: 100%; 
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,16 +206,62 @@ body{
     top: 105vh;
 }
 
+#about:hover{
+    top: 103vh;
+}
+
+#description{
+    position: absolute;
+    text-align: justify-all;
+    width: 80%;
+    left: 50%;
+    margin-left: -40%;
+    top: 30%;
+    font-family: poppins;
+    font-size: 1.2em;
+    line-height: 30px;
+}
+
+#desc-name{
+    font-family: "dancing script";
+    font-size: 1.4em;
+    border-bottom: 2px solid #00000000;
+    transition: color .4s, border-bottom .4s;
+}
+
+#desc-name:hover{
+    color: #eee; /*var(--highlight_color)*/
+    border-bottom: 2px solid #eee; /*var(--highlight_color)*/
+}
+
+/*Projects*/
+
 #projects{
     top: 205vh;
 }
+
+#projects:hover{
+    top: 203vh;
+}
+
+/*Social*/
 
 #social{
     top: 305vh;
 }
 
+#social:hover{
+    top: 303vh;
+}
+
+/*Contact*/
+
 #contact{
     top: 405vh;
+}
+
+#contact:hover{
+    top: 403vh;
 }
 
 /*Burger animations*/
@@ -229,8 +296,6 @@ body{
 .brg-active #line3{
     transform: rotate(45deg) translateY(-15px);
 }
-
-
 
 /*Nav bar*/
 
