@@ -4,12 +4,17 @@
 }
 
 :root{
-    --section_color: #5ac09d; /*original: #50f0c0a0*/
-    --section_3d_color: #459278; /*original: #30d0a0a0*/
-    --background_color: #417764; /*original: #086*/
-    --highlight_color: #7fffd4; /*original: aquamarine*/
-    --shadow_color: #2e4f43; /*original: #005040a0*/
+    --section_color: #5af0cda0; /*original: #50f0c0a0*/ /*v2: #5af0cda0*/
+    --section_3d_color: #20c0a0a0; /*original: #30d0a0a0*/ /*v2: #20c0a0a0*/
+    --background_color: #065; /*original: #086*/ /*v2: #065*/
+    --highlight_color: aquamarine; /*original: aquamarine*/
+    --highlight_color_v2: #0aa;
+    --shadow_color: #003d40a0; /*original: #005040a0*/ /*v2: #003d40a0*/
+    --nav_background: #10b090fa; /*original: #60b090*/ /*v2: */
+    --nav_hover: #3ad0ad80; /*original: #50a080*/ /*v2: */
 }
+
+
 
 html{
     scroll-behavior: smooth;
@@ -210,28 +215,84 @@ body{
     top: 103vh;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-top: 18vh;
+}
+
+
 #description{
-    position: absolute;
+    position: relative;
     text-align: justify-all;
     width: 80%;
-    left: 50%;
-    margin-left: -40%;
-    top: 30%;
+    background-color: #eeea;
+    padding: 10px;
+    border-radius: 10px;
     font-family: poppins;
-    font-size: 1.2em;
-    line-height: 30px;
+    font-size: 2vh;
+    line-height: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 0px #ccca;
 }
 
 #desc-name{
     font-family: "dancing script";
-    font-size: 1.4em;
+    font-size: 3vh;
     border-bottom: 2px solid #00000000;
     transition: color .4s, border-bottom .4s;
 }
 
 #desc-name:hover{
-    color: #eee; /*var(--highlight_color)*/
-    border-bottom: 2px solid #eee; /*var(--highlight_color)*/
+    color: var(--highlight_color_v2);
+    border-bottom: 2px solid var(--highlight_color_v2);
+}
+
+#skills{
+    position: relative;
+    font-size: 2.5em;
+    font-family: poppins;
+    letter-spacing: 3px;
+    pointer-events: all;
+    margin-top: 25px;
+}
+
+#skills::after{
+    content: '';
+    position: absolute;
+    top: 80%;
+    width: 100%;
+    height: 3px;
+    background:#000;
+    transform: translateX(-100%) scale(0);
+    transition: transform .3s;
+}
+
+#skills:hover::after{
+    transform: translateX(-100%) scale(1);
+}
+
+.slider{
+    width: 150px;
+    overflow:hidden;
+    margin: auto;
+}
+
+.slider-imgs{
+    display: flex;
+    width: 100%;
+    transition: transform .4s;
+}
+
+.slider-imgs img{
+    width: 150px;
+    height: 170px;
 }
 
 /*Projects*/
@@ -309,7 +370,7 @@ nav{
     z-index: 10;
     height: 100%;
     width: 45vw;
-    background-color: #60b090;
+    background-color: var(--nav_background);
     float:right;
     right:0;
     position:fixed;
@@ -322,7 +383,7 @@ nav{
 
 .nav-bar li{
     list-style:none;
-    color:aquamarine;
+    color:var(--highlight_color);
     width:100%;
     position: relative;
     text-align: center;
@@ -346,13 +407,13 @@ nav{
     width: 150px;
     height: 3px;
     top: 65%;
-    background-color: aquamarine;
+    background-color: var(--highlight_color);
     transform: scale(0);
     transition: all .3s;
 }
 
 .nav-bar li:hover{
-    background-color:#50a080;
+    background-color:var(--nav_hover);
 }
 
 .nav-bar li:hover::after{
