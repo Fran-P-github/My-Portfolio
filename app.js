@@ -33,7 +33,9 @@ const nav_click = () => {
     let projects = document.querySelector('#projects-button');
     let social = document.querySelector('#social-button');
     let contact = document.querySelector('#contact-button');
-
+    
+    // IMPLEMENT FOR LOOP
+    
     home.addEventListener('click', () => {
         window.scrollTo({
             top:0,
