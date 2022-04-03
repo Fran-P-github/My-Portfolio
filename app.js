@@ -28,53 +28,18 @@ const parallax_effect = () => {
 }
 
 const nav_click = () => {
-    let home = document.querySelector('#home-button');
-    let about = document.querySelector('#about-button');
-    let projects = document.querySelector('#projects-button');
-    let social = document.querySelector('#social-button');
-    let contact = document.querySelector('#contact-button');
-    
-    // IMPLEMENT FOR LOOP
-    
-    home.addEventListener('click', () => {
-        window.scrollTo({
-            top:0,
-            left:0,
-            behavior: 'smooth'
-        });
-    });
+    let nav_bar = document.querySelector('.nav-bar')
+    let sections = nav_bar.children;
 
-    about.addEventListener('click', () => {
-        window.scrollTo({
-            top: window.innerHeight,
-            left: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    projects.addEventListener('click', () => {
-        window.scrollTo({
-            top: window.innerHeight * 2,
-            left: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    social.addEventListener('click', () => {
-        window.scrollTo({
-            top: window.innerHeight * 3,
-            left: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    contact.addEventListener('click', () => {
-        window.scrollTo({
-            top: window.innerHeight * 4,
-            left: 0,
-            behavior: 'smooth'
-        });
-    });
+    for(let i = 0; i < sections.length; i++){
+    	sections[i].addEventListener('click', () => {
+	    window.scrollTo({
+	        top: i * window.innerHeight,
+		left: 0,
+		behavior: 'smooth'
+	    });
+	});
+    }
 }
 
 const slider = () => {
