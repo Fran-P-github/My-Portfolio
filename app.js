@@ -49,7 +49,7 @@ const slider = () => {
     let imgs = document.querySelectorAll('.slider-imgs img');
     let size = 150;
     var counter = 1;
-    console.log(imgs.length)
+	
     imgs_slider.style.transform = `translateX(${-size * counter}px)`;
     next.addEventListener('click', () => {
         if(counter >= imgs.length - 1) return;
