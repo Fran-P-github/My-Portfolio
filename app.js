@@ -49,6 +49,7 @@ const slider = () => {
     let imgs = document.querySelectorAll('.slider-imgs img');
     let size = 150;
     var counter = 1;
+    console.log(imgs.length)
     imgs_slider.style.transform = `translateX(${-size * counter}px)`;
     next.addEventListener('click', () => {
         if(counter >= imgs.length - 1) return;
@@ -69,7 +70,7 @@ const slider = () => {
     imgs_slider.addEventListener("transitionend", () => {
         if(counter <= 0){
             imgs_slider.style.transition = "none";
-            counter = 8;
+            counter = imgs.length - 2; // imgs length
             imgs_slider.style.transform = `translateX(${-size * counter}px)`;
         }
 
