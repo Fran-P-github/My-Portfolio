@@ -55,7 +55,7 @@ const slider = () => {
         if(counter >= imgs.length - 1) return;
         counter++;
         imgs_slider.style.transition = "transform .4s";
-        imgs_slider.style.transform = `translateX(${-size * counter -1}px)`;
+        imgs_slider.style.transform = `translateX(${-size * counter - 1}px)`;
 
     });
 

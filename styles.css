@@ -260,7 +260,7 @@ body{
     font-family: poppins;
     letter-spacing: 3px;
     pointer-events: all;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 #skills::after{
@@ -282,6 +282,7 @@ body{
     width: 150px;
     overflow:hidden;
     margin: auto;
+    margin-top: 20px;
 }
 
 .slider-imgs{
@@ -292,6 +293,33 @@ body{
 .slider-imgs img{
     width: 150px;
     height: 170px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--section_color);
+    font-size: 24px;
+    color: var(--shadow_color);
+    transition: color .4s, background-color .4s;
+    position: absolute;
+    margin-top: 240px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: #fff;
+    background-color: var(--nav_hover);
+}
+
+#next {
+    margin-left: 250px;
+}
+
+#prev{
+    margin-right: 250px;
 }
 
 /*Projects*/
